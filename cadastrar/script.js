@@ -9,8 +9,11 @@
       const nome = document.getElementById('nome').value;
       const email = document.getElementById('email').value;
       const senha = document.getElementById('senha').value;
+      const datanascimento = document.getElementById('datanascimento').value;
+      const telefone = document.getElementById('telefone').value;
+      
 
-      if (nome === '' || email === '' || senha === '') {
+      if (nome === '' || email === '' || senha === '' || datanascimento === '' || telefone === '') {
         mensagem.textContent = 'Preencha todos os campos.';
         mensagem.className = 'mensagem';
         return;
@@ -26,7 +29,7 @@
         return;
       }
 
-      usuarios.push({ nome: nome, email: email, senha: senha });
+      usuarios.push({ nome: nome, email: email, senha: senha , datanascimento: datanascimento, telefone: telefone });
 
       localStorage.setItem('usuarios', JSON.stringify(usuarios));
 
