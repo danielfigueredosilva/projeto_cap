@@ -33,6 +33,9 @@
       mensagem.textContent = 'Cadastro realizado com sucesso!';
       mensagem.className = 'mensagem sucesso';
 
+      setTimeout(() => {
+            window.location.href = '/login/index.html';
+        },2000);   
       // Limpa os campos
       formulario.reset();
     };
