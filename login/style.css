@@ -1,5 +1,5 @@
 body {
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: #d3caca;
   padding: 20px;
   margin: 0;
@@ -9,7 +9,7 @@ body {
   min-height: 100vh;
 }
 
-#formulario {
+#cadastro {
   background-color: #fff;
   padding: 30px;
   border: 2px solid #333;
@@ -18,21 +18,32 @@ body {
   width: 100%;
 }
 
-#formulario h2 {
+#cadastro h2 {
   text-align: center;
   margin-bottom: 20px;
   color: #333;
   font-size: 250%;
 }
 
-input, button {
+button {
   width: 100%;
   padding: 15px;
   margin: 15px 0;
   border: 1px solid #ccc;
   border-radius: 10px;
   box-sizing: border-box;
-  
+}
+input {
+  width: 100%;
+  margin: 15px 0;
+  padding: 15px;
+  font-size: 18px;
+  padding-left: 40px;
+  padding-top: 18px;
+  background-position: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
 }
 
 button {
@@ -41,12 +52,21 @@ button {
   border: none;
   font-weight: bold;
 }
+input#email {
+  background-image: url(../image/icone-usuario.png);
+  background-repeat: no-repeat;
+}
+
+input#senha {
+  background-image: url(../image/icone-cadeado.png);
+  background-repeat: no-repeat;
+}
 
 button:hover {
   background-color: #8e7d7d;
   cursor: pointer;
 }
-a{
+a {
   text-decoration: none;
   color: blue;
 }
@@ -60,5 +80,3 @@ p {
 a:hover {
   text-decoration: underline;
 }
-
-  
