@@ -1,5 +1,7 @@
 const nomeSpan = document.getElementById('nomeUsuario');
 const emailSpan = document.getElementById('emailUsuario');
+const foneSpan = document.getElementById('foneUsuario')
+const dtNascSpan = document.getElementById('dtNascUsuario')
 
 const usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
 
@@ -10,3 +12,5 @@ if (usuarioLogado) {
 }
 
 emailSpan.textContent = usuarioLogado.email
+foneSpan.textContent = usuarioLogado.telefone
+dtNascSpan.textContent = usuarioLogado.datanascimento
