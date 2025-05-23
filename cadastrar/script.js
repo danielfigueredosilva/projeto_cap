@@ -13,11 +13,34 @@
       const telefone = document.getElementById('telefone').value;
       
 
-      if (nome === '' || email === '' || senha === '' || datanascimento === '' || telefone === '') {
-        mensagem.textContent = 'Preencha todos os campos.';
+      
+
+      if (nome === '') {
+        mensagem.textContent = 'Nome Precisa ser Preenchido.';
         mensagem.className = 'mensagem';
         return;
       }
+      if (telefone === '') {
+        mensagem.textContent = 'Telefone Precisa ser Preenchido.';
+        mensagem.className = 'mensagem';
+        return;
+      }
+      if (email === '') {
+        mensagem.textContent = 'Email Precisa ser Preenchido.';
+        mensagem.className = 'mensagem';
+        return;
+      }
+      if (senha === '') {
+        mensagem.textContent = 'Senha Precisa ser Preenchido.';
+        mensagem.className = 'mensagem';
+        return;
+      }
+      if (datanascimento === '') {
+        mensagem.textContent = 'Data de Nascimento Precisa ser Preenchido.';
+        mensagem.className = 'mensagem';
+        return;
+      }
+      
 
       
       let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
@@ -37,8 +60,7 @@
       mensagem.className = 'mensagem sucesso';
 
       setTimeout(() => {
-            window.location.href = '/login/index.html';
+            window.location.href = '../login/';
         },2000);   
-      // Limpa os campos
-      formulario.reset();
+      
     };
