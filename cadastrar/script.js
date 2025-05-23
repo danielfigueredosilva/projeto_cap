@@ -25,6 +25,11 @@
         mensagem.className = 'mensagem';
         return;
       }
+        if (telefone.length != 11) {
+        mensagem.textContent = 'Telefone precisa ter 11 digitos'
+        mensagem.className = 'mensagem';
+        return
+      }
       if (email === '') {
         mensagem.textContent = 'Email Precisa ser Preenchido.';
         mensagem.className = 'mensagem';
