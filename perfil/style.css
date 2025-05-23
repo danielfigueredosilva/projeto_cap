@@ -1,6 +1,17 @@
 body {
     display: flex;
+    justify-content: center;
     align-items: center;
-    flex-direction: column  
-
+    flex-direction: column;
+    
+    
 }
+#main {
+    border: 2px solid rgb(156, 148, 148) ;
+    border-radius: 10px;
+    padding: 10px;
+    
+}
+
+
+
