@@ -7,10 +7,12 @@ body {
     
 }
 #main {
+    display: flex;
+    flex-direction: column;
     border: 2px solid rgb(156, 148, 148) ;
     border-radius: 10px;
     padding: 10px;
-    
+    gap: 20px;
 }
 
 

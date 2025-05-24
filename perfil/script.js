@@ -1,16 +1,43 @@
-const nomeSpan = document.getElementById('nomeUsuario');
-const emailSpan = document.getElementById('emailUsuario');
-const foneSpan = document.getElementById('foneUsuario')
-const dtNascSpan = document.getElementById('dtNascUsuario')
+const nomeInput = document.getElementById('nomeInput');
+const emailInput = document.getElementById('emailInput');
+const telefoneInput = document.getElementById('telefoneInput');
+const dtNascInput = document.getElementById('dtNascInput');
+const senhaInput = document.getElementById('senhaInput');
 
 const usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
+const usuarios = JSON.parse(localStorage.getItem('usuarios'));
 
 if (usuarioLogado) {
-    nomeSpan.textContent = usuarioLogado.nome
-}else {
-      location.href = '../login/index.html';
+    nomeInput.value = usuarioLogado.nome;
+    emailInput.value = usuarioLogado.email;
+    telefoneInput.value = usuarioLogado.telefone;
+    dtNascInput.value = usuarioLogado.datanascimento;
+    senhaInput.value = usuarioLogado.senha;
+} else {
+    window.location.href = '../login/login';
 }
 
-emailSpan.textContent = usuarioLogado.email
-foneSpan.textContent = usuarioLogado.telefone
-dtNascSpan.textContent = usuarioLogado.datanascimento
+function salvaDados() {
+    let nome = nomeInput.value;
+    let email = emailInput.value;
+    let telefone = telefoneInput.value;
+    let dtNasc = dtNascInput.value;
+    let senha = senhaInput.value;
+
+    
+    const houveAlteracao = (
+        nome !== usuarioLogado.nome ||
+        email !== usuarioLogado.email ||
+        telefone !== usuarioLogado.telefone ||
+        dtNasc !== usuarioLogado.datanascimento ||
+        senha !== usuarioLogado.senha
+    );
+
+    if (houveAlteracao) {
+        console.log("oi");
+        
+        
+        localStorage.setItem('usuarios', JSON.stringify(usuarios));
+        localStorage.setItem('usuarioLogado', JSON.stringify(usuarioEditado));
+    }
+}
