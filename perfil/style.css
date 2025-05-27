@@ -4,9 +4,9 @@ body {
     align-items: center;
     flex-direction: column;
     gap: 10px;
-    
-    
+      
 }
+/* Formulario de edição do perfil */
 #main {
     display: flex;
     flex-direction: column;

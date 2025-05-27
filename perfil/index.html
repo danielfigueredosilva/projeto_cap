@@ -8,20 +8,20 @@
 </head>
 <body>
 
-   
+    <!-- Titulo -->
     <h1>Perfil</h1>
-    <div id="main">
-        
+
+    <!--Formulario para o usuario poder editar dados salvos-->
+    <forms id="main">
         <h2>Dados do Usuário</h2>
         <label>EMAIL: <span id="emailSpan"></span></label>
         <label>NOME: <input type="text" id="nomeInput"></input></label>
         <label>TELEFONE: <input type="tel" id="telefoneInput" maxlength="11"></label>
         <label>DATA DE NASCIMENTO: <input type="date" id="dtNascInput"></label>
         <label>SENHA: <input type="password" id="senhaInput"></label>
-        <button type="submit" onclick="salvaDados()">SALVAR</button>
-        
-    </div>
-
+        <button type="submit" onclick="editaDados()">SALVAR</button>  
+    </forms>
+    <!-- Mensagem de erro -->
     <span id="mensagem"></span> 
 
     <script src="script.js"></script>
