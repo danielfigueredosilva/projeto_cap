@@ -13,14 +13,16 @@
     <div id="main">
         
         <h2>Dados do Usuário</h2>
+        <label>EMAIL: <span id="emailSpan"></span></label>
         <label>NOME: <input type="text" id="nomeInput"></input></label>
-        <label>EMAIL: <input type="email" id="emailInput"></input></label>
         <label>TELEFONE: <input type="tel" id="telefoneInput" maxlength="11"></label>
         <label>DATA DE NASCIMENTO: <input type="date" id="dtNascInput"></label>
         <label>SENHA: <input type="password" id="senhaInput"></label>
         <button type="submit" onclick="salvaDados()">SALVAR</button>
         
     </div>
+
+    <span id="mensagem"></span> 
 
     <script src="script.js"></script>
 </body>
