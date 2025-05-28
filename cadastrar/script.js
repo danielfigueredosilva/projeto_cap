@@ -3,9 +3,15 @@ const cep = document.getElementById("cep");
 const mensagem = document.getElementById("mensagem");
 
 cep.onchange = function (evento) {
-  evento.preventDefault();
+ 
   let cepValor = document.getElementById("cep").value;
 
+  if(cepValor.length < 8) {
+    console.log(cepValor)
+        document.getElementById("Logradouro").value = "";
+        document.getElementById("UF").value = "";
+        document.getElementById("Cidade").value =  "" ;
+  }
   if (cepValor.length == 8) {
     fetch(`https://cep.awesomeapi.com.br/json/${cepValor}`)
       .then((response) => response.json())
