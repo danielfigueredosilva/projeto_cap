@@ -1,4 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 8vh;
+    box-shadow: 5px 5px 5px rgb(242, 239, 239);
+    margin-bottom: 30px;
+}
 body {
+   
+    background-color: #FAFAFA;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,14 +23,44 @@ body {
     gap: 10px;
       
 }
-/* Formulario de edição do perfil */
 #main {
+    background-color:#FFFFFF;
+    border-radius: 10px;  
+    box-shadow: 5px 5px 5px rgb(242, 239, 239);
+    padding: 20px;
+}
+h2{
+    align-self: center;
+    margin-bottom: 15px;
+}
+form{
     display: flex;
+    gap: 15px;
     flex-direction: column;
-    border: 2px solid rgb(156, 148, 148) ;
+    background-color: rgb(0, 0, 0, 0, 0.75);
+}
+label{
+    color: black;
+}
+
+input{
+    background-color: #FAFAFA;
     border-radius: 10px;
-    padding: 10px;
-    gap: 20px;
+    border: none;
+    padding: 5px;
+}
+button{
+    width: 40%;
+    background-color: #F0F0F0;
+    border-radius: 15px;
+    padding: 5px;
+    border: none;
+    align-self: center;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #FAFAFA;
 }
 
 

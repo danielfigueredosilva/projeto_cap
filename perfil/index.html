@@ -6,21 +6,27 @@
     <link rel="stylesheet" href="style.css">
     <title>Perfil</title>
 </head>
+<header>
+      <!-- Titulo -->
+    <h1>Perfil</h1>
+</header>
 <body>
 
-    <!-- Titulo -->
-    <h1>Perfil</h1>
+  
 
     <!--Formulario para o usuario poder editar dados salvos-->
-    <forms id="main">
-        <h2>Dados do Usuário</h2>
-        <label>EMAIL: <span id="emailSpan"></span></label>
-        <label>NOME: <input type="text" id="nomeInput"></input></label>
-        <label>TELEFONE: <input type="tel" id="telefoneInput" maxlength="11"></label>
-        <label>DATA DE NASCIMENTO: <input type="date" id="dtNascInput"></label>
-        <label>SENHA: <input type="password" id="senhaInput"></label>
-        <button type="submit" onclick="editaDados()">SALVAR</button>  
-    </forms>
+
+    <div id="main">
+        <form>
+            <h2>Dados do Usuário</h2>
+            <label>EMAIL: <span id="emailSpan"></span></label>
+            <label>NOME: <input type="text" id="nomeInput"></input></label>
+            <label>TELEFONE: <input type="tel" id="telefoneInput" maxlength="11"></label>
+            <label>DATA DE NASCIMENTO: <input type="date" id="dtNascInput"></label>
+            <label>SENHA: <input type="password" id="senhaInput"></label>
+            <button type="submit" onclick="editaDados()">Salvar</button>
+        </form>
+    </div>
     <!-- Mensagem de erro -->
     <span id="mensagem"></span> 
 
