@@ -1,28 +1,48 @@
 <!DOCTYPE html>
 <html lang="PT-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastrar</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
     <div id="formulario">
-        <form >
-            <h2>Cadastro</h2>
-            <input type="text" id="nome" placeholder="Nome">
-            <input type="tel" id="telefone" placeholder="Telefone" maxlength="11">
-            <input type="email" id="email" placeholder="E-mail">
-            <input type="password" id="senha" placeholder="Senha">
-            <input type="date" id="datanascimento" placeholder="Data de Nascimento" maxlength="8">
-            <button type="submit">Cadastrar</button>
-            <P>Já tem login? <a href="../login/"> Entrar</a></P>
-            <div class="mensagem" id="mensagem"></div>
-        </form>
+      <form>
+        <h2>Cadastro</h2>
+        <input type="text" id="nome" placeholder="Nome" />
+        <input type="tel" id="telefone" placeholder="Telefone" maxlength="11" />
+        <input type="email" id="email" placeholder="E-mail" />
+        <input type="password" id="senha" placeholder="Senha" />
+        <div class="DivCep">
+          <input
+            type="text"
+            id="cep"
+            placeholder="Digite seu Cep"
+            maxlength="8"
+            minlength="8"
+          />
+          <input type="text" id="Cidade" placeholder="Cidade" disabled />
+          <input
+            type="text"
+            id="Logradouro"
+            placeholder="Logradouro"
+            disabled
+          />
+          <input type="text" id="UF" placeholder="UF" disabled />
+        </div>
+        <input
+          type="date"
+          id="datanascimento"
+          placeholder="Data de Nascimento"
+          maxlength="8"
+        />
+        <button type="submit">Cadastrar</button>
+        <p>Já tem login? <a href="../login/"> Entrar</a></p>
+        <div class="mensagem" id="mensagem"></div>
+      </form>
     </div>
-        
-    <script src="script.js"></script>
 
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
