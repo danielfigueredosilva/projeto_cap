@@ -1,27 +1,30 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #d3caca;
-  padding: 20px;
-  margin: 0;
+  background-image: url(../image/background-login.jpg);
+  background-size: 1250px;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
 
-#cadastro {
-  background-color: #fff;
+#main {
+  background-color: rgba(0, 0, 0, 0.75);
   padding: 30px;
-  border: 2px solid #333;
-  border-radius: 15px;
-  max-width: 400px;
+  border-radius: 5px;
+  max-width: 250px;
   width: 100%;
 }
 
-#cadastro h2 {
+#main h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #333;
+  color: #898E79;
   font-size: 250%;
 }
 
@@ -36,44 +39,57 @@ button {
 input {
   width: 100%;
   margin: 15px 0;
+  height: 20px;
   padding: 15px;
   font-size: 18px;
-  padding-left: 40px;
+  padding-left: 45px;
   padding-top: 18px;
-  background-position: 10px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+  background-position: 20px;
+  border: none;
+  border-radius: 40px;
   box-sizing: border-box;
+  outline: none;
 }
 
 button {
-  background-color: #b3a5a5;
+  background-color: #898E79;
+  border-radius: 40px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
   border: none;
   font-weight: bold;
+
 }
 input#email {
   background-image: url(../image/icone-usuario.png);
+  background-size: 11px;
   background-repeat: no-repeat;
+  font-size: 16px;
 }
 
 input#senha {
   background-image: url(../image/icone-cadeado.png);
+  background-size:11px ;
   background-repeat: no-repeat;
+  font-size: 14px;
+  
 }
 
 button:hover {
-  background-color: #8e7d7d;
+  background-color: #aca3a3;
   cursor: pointer;
 }
 a {
   text-decoration: none;
-  color: blue;
+  color: #FFBE6A;
 }
 p {
   text-align: center;
   margin-top: 10px;
-  color: #333;
+  color: #898E79;
   text-decoration: none;
 }
 

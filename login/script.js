@@ -1,5 +1,4 @@
-const formulario = document.getElementById('cadastro');
-const mensagem = document.getElementById('mensagem')
+const mensagem = document.getElementById('mensagem');
 
 formulario.onsubmit = function(evento){
     evento.preventDefault();
