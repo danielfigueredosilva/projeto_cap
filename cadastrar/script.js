@@ -11,9 +11,9 @@ cep.onchange = function (evento) {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        document.getElementById("Logradouro").value = data.address;
-        document.getElementById("UF").value = data.state;
-        document.getElementById("Cidade").value = data.city;
+        document.getElementById("Logradouro").value = data.address || "";
+        document.getElementById("UF").value = data.state || "";
+        document.getElementById("Cidade").value = data.city || "" ;
       })
       .catch((error) => console.log(error));
   }
@@ -27,6 +27,10 @@ formulario.onsubmit = function (evento) {
   const senha = document.getElementById("senha").value;
   const datanascimento = document.getElementById("datanascimento").value;
   const telefone = document.getElementById("telefone").value;
+  const cep = document.getElementById("cep").value;
+  const Logradouro = document.getElementById("Logradouro").value;
+  const uf = document.getElementById("UF").value;
+  const Cidade = document.getElementById("Cidade").value;
 
   if (nome === "") {
     mensagem.textContent = "Nome Precisa ser Preenchido.";
@@ -40,6 +44,11 @@ formulario.onsubmit = function (evento) {
   }
   if (telefone.length != 11) {
     mensagem.textContent = "Telefone precisa ter 11 digitos";
+    mensagem.className = "mensagem";
+    return;
+  }
+  if (cep.length != 8) {
+    mensagem.textContent = "Cep precisa ter 8 digitos";
     mensagem.className = "mensagem";
     return;
   }
@@ -74,6 +83,10 @@ formulario.onsubmit = function (evento) {
     senha: senha,
     datanascimento: datanascimento,
     telefone: telefone,
+    cep: cep,
+    uf: uf,
+    Logradouro: Logradouro,
+    Cidade:Cidade,
   });
 
   localStorage.setItem("usuarios", JSON.stringify(usuarios));
