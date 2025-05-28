@@ -12,9 +12,8 @@ body {
 }
 
 #formulario {
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgb(61, 156, 144,0.97);
   padding: 30px;
-  border: 2px solid #333;
   border-radius: 15px;
   max-width: 400px;
   width: 100%;
@@ -38,8 +37,8 @@ button {
 }
 
 button {
-  background-color: #b3a5a5;
-  color: #fff;
+  background-color: #ffffff;
+  color: #000000;
   border: none;
   font-weight: bold;
 }
@@ -73,7 +72,7 @@ button:hover {
    background-color: #fff;
 }
 #Cidade{
- width: 50%;
+ width: 45%;
  
  background-color: #fff;
 }
