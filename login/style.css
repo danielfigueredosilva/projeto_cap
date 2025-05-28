@@ -16,6 +16,7 @@ body {
 #tudo{
   background-color: rgb(61, 156, 144,0.97);
   max-width: 800px;
+  height: 490px;
   width: 100%;
   display: flex;
   justify-content: space-between;
