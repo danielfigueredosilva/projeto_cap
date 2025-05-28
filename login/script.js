@@ -1,3 +1,4 @@
+const cadastro = document.getElementById('main');
 const mensagem = document.getElementById('mensagem');
 
 formulario.onsubmit = function(evento){
