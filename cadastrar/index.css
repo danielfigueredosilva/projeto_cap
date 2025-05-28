@@ -2,7 +2,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-image: url(../image/background-login.jpg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
+  background-position: center;
   padding: 20px;
   margin: 0;
   display: flex;
@@ -12,19 +13,18 @@ body {
 }
 
 #formulario {
-  background-color: rgb(61, 156, 144,0.97);
+  background-color: rgba(61, 156, 144, 0.97);
   padding: 30px;
   border-radius: 15px;
   max-width: 400px;
   width: 100%;
-  margin-top: px;
 }
+
 #formulario h2 {
   text-align: center;
   margin-bottom: 20px;
   color: #ffffff;
   font-size: 250%;
-  margin-top: -1px;
 }
 
 input,
@@ -58,46 +58,98 @@ button:hover {
   color: red;
   text-align: center;
 }
-.DivCep{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
 
-
-#cep{
-  width: 45%;
-  
-}
-#UF{
-  width: 20%;
-   background-color: #fff;
-}
-#Logradouro{
-  width: 75%;
-   background-color: #fff;
-}
-#Cidade{
- width: 45%;
- 
- background-color: #fff;
-}
 .sucesso {
   color: green;
   text-align: center;
 }
+
+.DivCep {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+#cep {
+  flex: 1 1 45%;
+}
+
+#UF {
+  flex: 1 1 20%;
+  background-color: #fff;
+}
+
+#Logradouro {
+  flex: 1 1 75%;
+  background-color: #fff;
+}
+
+#Cidade {
+  flex: 1 1 45%;
+  background-color: #fff;
+}
+
 #formulario a {
   color: #FFE574;
-   text-decoration: none;
+  text-decoration: none;
 }
-#formulario p{
+
+#formulario p {
   text-align: center;
- 
   margin-top: 10px;
   color: #fff;
-  text-decoration: none;
 }
 
 #formulario a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  #formulario {
+    padding: 20px;
+  }
+
+  #formulario h2 {
+    font-size: 200%;
+  }
+
+  .DivCep {
+    flex-direction: column;
+  }
+
+  #cep,
+  #UF,
+  #Logradouro,
+  #Cidade {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  input,
+  button {
+    padding: 12px;
+    margin: 10px 0;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  #formulario {
+    padding: 25px;
+  }
+
+  #formulario h2 {
+    font-size: 220%;
+  }
+
+  .DivCep {
+    gap: 10px;
+  }
+
+  #cep,
+  #UF,
+  #Logradouro,
+  #Cidade {
+    flex: 1 1 45%;
+  }
 }
