@@ -5,6 +5,7 @@ const telefoneInput = document.getElementById('telefoneInput');
 const dtNascInput = document.getElementById('dtNascInput');
 const senhaInput = document.getElementById('senhaInput');
 const mensagem = document.getElementById('mensagem');
+const formulario = document.getElementById('formulario');
 
 //Pega os arrays no localStorage 
 let usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
@@ -25,7 +26,8 @@ if (usuarioLogado) {
 }
 
 //Edita dados do perfil do usuario logado
-function editaDados() {
+formulario.onsubmit = function (evento) {
+    evento.preventDefault();
     //Pega o value do forms
     let nome = nomeInput.value;
     let email = emailInput.value
@@ -40,6 +42,14 @@ function editaDados() {
         dtNasc !== usuarioLogado.datanascimento ||
         senha !== usuarioLogado.senha
     );
+
+    if (!nome || !telefone || !dtNasc || !senha) {
+    mensagem.style.display = 'block';
+    mensagem.textContent = 'Preencha todos os campos.';
+    mensagem.style.color = 'red';
+    return;
+    }
+
     //Se for true  
     if (houveAlteracao) {
         console.log("oi");
@@ -68,12 +78,17 @@ function editaDados() {
         
         //Se a menssagen de erro ja apareceu na tela, ela é ocultada
         mensagem.style.display = 'none';
+        mensagem.style.display = 'block';
+        mensagem.textContent = 'Dados atualizados com sucesso!';
+        mensagem.style.color = 'green';
+
 
     }else{
         //Se o usuario salvar sem alterar os dados mostra messagem de erro
-        mensagem.style.display = 'block'
+        mensagem.style.display = 'block';
         //Estilização da mensagem de erro
         mensagem.textContent = ('Nenhum dado modificado!');
         mensagem.style.color = 'red';
+        
     }
 }
