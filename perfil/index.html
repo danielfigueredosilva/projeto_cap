@@ -12,19 +12,17 @@
 </header>
 <body>
 
-  
-
     <!--Formulario para o usuario poder editar dados salvos-->
 
     <div id="main">
-        <form>
+        <form id="formulario">
             <h2>Dados do Usuário</h2>
             <label>EMAIL: <span id="emailSpan"></span></label>
             <label>NOME: <input type="text" id="nomeInput"></input></label>
             <label>TELEFONE: <input type="tel" id="telefoneInput" maxlength="11"></label>
             <label>DATA DE NASCIMENTO: <input type="date" id="dtNascInput"></label>
             <label>SENHA: <input type="password" id="senhaInput"></label>
-            <button type="submit" onclick="editaDados()">Salvar</button>
+            <button type="submit">Salvar</button>
         </form>
     </div>
     <!-- Mensagem de erro -->

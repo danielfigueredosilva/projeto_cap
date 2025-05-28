@@ -1,0 +1,1 @@
+Fazer com o apague o objeto do usuarioLogado pela pagina da lista
