@@ -19,7 +19,7 @@ body {
 }
 #main {
   margin: 0 auto;
-  width: 20%;
+  width: 30%;
   background-color: #0077cc;
   border-radius: 10px;
   box-shadow: 5px 5px 5px rgb(242, 239, 239);
@@ -28,6 +28,7 @@ body {
 h2 {
   align-self: center;
   margin-bottom: 15px;
+  color: #fff;
 }
 form {
   display: flex;
@@ -37,7 +38,7 @@ form {
   align-items: start;
 }
 label {
-  color: black;
+  color: #fff;
 }
 
 input {

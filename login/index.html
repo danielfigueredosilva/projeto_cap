@@ -6,23 +6,44 @@
     <link rel="stylesheet" href="style.css">
     <title>Login</title>
 </head>
+
 <body>
     <div id="tudo">
+        <!-- Container principal da página -->
 
         <div id="Cartaz">
-            
-           <img src="../image/hotel.png" class="imagem" alt="">
+            <!-- Seção para exibir uma imagem de destaque (cartaz ou logo) -->
+            <img src="../image/hotel.png" class="imagem" alt="">
+            <!-- Imagem ilustrativa ou logotipo do sistema -->
         </div>
+
         <div id="main">
+            <!-- Seção principal com o formulário de login -->
             <form id="formulario">
+                <!-- Formulário de login -->
                 <h2>Login</h2>
+                <!-- Título do formulário -->
+
                 <input type="email" id="email" placeholder="E-mail">
+                <!-- Campo para entrada de e-mail -->
+
                 <input type="password" id="senha" placeholder="Senha"> 
+                <!-- Campo para entrada de senha -->
+
                 <button type="submit">Entrar</button>
-                <p>Não tem cadastro? <a href="../cadastrar/index.html">Cadastre-se</a></p>
+                <!-- Botão para enviar o formulário -->
+
+                <p>Não tem cadastro? 
+                    <a href="../cadastrar/index.html">Cadastre-se</a>
+                    <!-- Link para a página de cadastro -->
+                </p>
+
                 <div id="mensagem"></div>
+                <!-- Div para exibir mensagens de erro ou sucesso -->
             </form>
+
             <script src="script.js"></script>
+            <!-- Importa o arquivo JavaScript que irá tratar a lógica do login -->
         </div>
         
     </div>

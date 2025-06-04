@@ -6,6 +6,10 @@ const dtNascInput = document.getElementById('dtNascInput');
 const senhaInput = document.getElementById('senhaInput');
 const mensagem = document.getElementById('mensagem');
 const formulario = document.getElementById('formulario');
+const cepInput = document.getElementById('cepInput');
+const cidadeInput = document.getElementById('cidadeInput');
+const logradouroInput = document.getElementById('logradouroInput');
+const UFInput = document.getElementById('UFInput');
 
 //Pega os arrays no localStorage 
 let usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
@@ -13,6 +17,28 @@ let usuarios = JSON.parse(localStorage.getItem('usuarios'));
 
 //Atribui o email do usuario logado no id do span
 emailInput.textContent = usuarioLogado.email;
+cepInput.onchange = function (evento) {
+ 
+  let cepValor = document.getElementById("cepInput").value;
+
+//   if(cepValor.length < 8) {
+//     console.log(cepValor)
+//         document.getElementById("logradouro").value = "";
+//         document.getElementById("UF").value = "";
+//         document.getElementById("Cidade").value =  "" ;
+//   }
+  if (cepValor.length == 8) {
+    fetch(`https://cep.awesomeapi.com.br/json/${cepValor}`)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        document.getElementById("logradouroInput").value = data.address || "";
+        document.getElementById("UFInput").value = data.state || "";
+        document.getElementById("cidadeInput").value = data.city || "";
+      })
+      .catch((error) => console.log(error));
+  }
+};
 
 //Se a condição for true atribue os dados do usuario logado no value do input e mostra na tela de perfil
 if (usuarioLogado) {
@@ -21,6 +47,10 @@ if (usuarioLogado) {
     telefoneInput.value = usuarioLogado.telefone;
     dtNascInput.value = usuarioLogado.datanascimento;
     senhaInput.value = usuarioLogado.senha;
+    cepInput.value = usuarioLogado.cep;
+    cidadeInput.value = usuarioLogado.Cidade;
+    logradouroInput.value = usuarioLogado.Logradouro;
+    UFInput.value = usuarioLogado.uf;
 } else {
     window.location.href = '../login/login';
 }
@@ -34,16 +64,18 @@ formulario.onsubmit = function (evento) {
     let telefone = telefoneInput.value;
     let dtNasc = dtNascInput.value;
     let senha = senhaInput.value;
+    let cep = cepInput.value;
 
     //Testa condição boleana, true ou false 
     const houveAlteracao = (
         nome !== usuarioLogado.nome ||
         telefone !== usuarioLogado.telefone ||
         dtNasc !== usuarioLogado.datanascimento ||
-        senha !== usuarioLogado.senha
+        senha !== usuarioLogado.senha ||
+        cep !== usuarioLogado.cep
     );
 
-    if (!nome || !telefone || !dtNasc || !senha) {
+    if (!nome || !telefone || !dtNasc || !senha || !cep) {
     mensagem.style.display = 'block';
     mensagem.textContent = 'Preencha todos os campos.';
     mensagem.style.color = 'red';
@@ -70,6 +102,9 @@ formulario.onsubmit = function (evento) {
 
             usuarios[index].senha = senha;
             usuarioLogado.senha = senha;
+
+            usuarios[index].cep = cep;
+            usuarioLogado.cep = cep;
         }
         
         //Envia para o localStorage os dados editados, para os dois arrays do localStorage
