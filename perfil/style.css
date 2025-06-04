@@ -3,8 +3,14 @@
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+:root {
+    --cor-principal: rgb(61, 156, 144,0.97);
+    --cor-hover-butao: #FFE574;
+}
+
 header {
-  background-color: rgb(61, 156, 144,0.97);
+  background-color: var(--cor-principal);
   color: white;
   padding: 20px;
   border-radius: 8px;
@@ -20,7 +26,7 @@ body {
 #main {
   margin: 0 auto;
   width: 30%;
-  background-color: rgb(61, 156, 144,0.97);
+  background-color: var(--cor-principal);
   border-radius: 10px;
   box-shadow: 5px 5px 5px rgb(242, 239, 239);
   padding: 20px;
@@ -34,7 +40,7 @@ form {
   display: flex;
   gap: 15px;
   flex-direction: column;
-  background-color: rgb(61, 156, 144,0.97);
+  background-color: var(--cor-principal);
   align-items: start;
 }
 label {
@@ -55,9 +61,28 @@ button {
   padding: 5px;
   border: none;
   align-self: center;
+  color: black;
 }
 
 button:hover {
   cursor: pointer;
-  background-color: #fafafa;
+  background-color: var(--cor-hover-butao);
+  
+}
+
+@media (max-width: 480px) {
+  #main{
+  width: 89%;
+
+  header{
+    margin: 0;
+    padding: 0;
+  }
+ }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  #main{
+    width: 70%;
+  }
 }

@@ -5,6 +5,11 @@
     font-family: Arial, sans-serif;
 }
 
+:root {
+    --cor-principal: rgb(61, 156, 144,0.97);
+    --cor-hover-butao: #FFE574;
+}
+
 
 body {
     background-color: #f4f4f4;
@@ -15,7 +20,7 @@ body {
 
 
 header {
-    background-color: rgb(61, 156, 144,0.97);
+    background-color: var(--cor-principal);
     color: white;
     padding: 20px;
     border-radius: 8px;
@@ -39,7 +44,7 @@ th, td {
 }
 
 th {
-    background-color: rgb(61, 156, 144,0.97);
+    background-color: var(--cor-principal);
     color: white;
 }
 
@@ -51,7 +56,7 @@ tr:hover {
 button {
     margin-top: 20px;
     padding: 12px 20px;
-    background-color: rgb(61, 156, 144,0.97);
+    background-color: var(--cor-principal);
     color: white;
     border: none;
     border-radius: 6px;
@@ -61,5 +66,19 @@ button {
 }
 
 button:hover {
-    background-color: #005fa3;
+    background-color: var(--cor-hover-butao);
+    color: black;
+}
+
+@media (max-width: 480px) {
+  table {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+
 }
