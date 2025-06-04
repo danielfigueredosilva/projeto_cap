@@ -15,7 +15,7 @@ body {
 
 
 header {
-    background-color: #0077cc;
+    background-color: rgb(61, 156, 144,0.97);
     color: white;
     padding: 20px;
     border-radius: 8px;
@@ -39,7 +39,7 @@ th, td {
 }
 
 th {
-    background-color: #0077cc;
+    background-color: rgb(61, 156, 144,0.97);
     color: white;
 }
 
@@ -51,7 +51,7 @@ tr:hover {
 button {
     margin-top: 20px;
     padding: 12px 20px;
-    background-color: #0077cc;
+    background-color: rgb(61, 156, 144,0.97);
     color: white;
     border: none;
     border-radius: 6px;

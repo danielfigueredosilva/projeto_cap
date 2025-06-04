@@ -4,7 +4,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 header {
-  background-color: #0077cc;
+  background-color: rgb(61, 156, 144,0.97);
   color: white;
   padding: 20px;
   border-radius: 8px;
@@ -20,7 +20,7 @@ body {
 #main {
   margin: 0 auto;
   width: 30%;
-  background-color: #0077cc;
+  background-color: rgb(61, 156, 144,0.97);
   border-radius: 10px;
   box-shadow: 5px 5px 5px rgb(242, 239, 239);
   padding: 20px;
@@ -34,7 +34,7 @@ form {
   display: flex;
   gap: 15px;
   flex-direction: column;
-  background-color: #0077cc;
+  background-color: rgb(61, 156, 144,0.97);
   align-items: start;
 }
 label {
