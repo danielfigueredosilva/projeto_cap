@@ -1,71 +1,62 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
-header{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-   background-color: rgba(61, 156, 144, 0.97);
-    width: 100%;
-    height: 8vh;
-    margin-bottom: 50px;
+header {
+  background-color: #0077cc;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
+
 body {
-   
-    background-image: url("../image/background-login.jpg");
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
-      
+  background-color: #f4f4f4;
+  color: #333;
+  text-align: center;
+  padding: 20px;
 }
 #main {
-    background-color: rgba(61, 156, 144, 0.97);
-    border-radius: 10px;  
-    display: flex;
-    
-    padding: 20px;
+  margin: 0 auto;
+  width: 20%;
+  background-color: #0077cc;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgb(242, 239, 239);
+  padding: 20px;
 }
-h2{
-    align-self: center;
-    margin-bottom: 15px;
+h2 {
+  align-self: center;
+  margin-bottom: 15px;
 }
-form{
-
-    display: flex;
-    
-    gap: 15px;
-    flex-direction: column;
-   background-color: rgba(61, 156, 144, 0.97);
+form {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  background-color: #0077cc;
+  align-items: start;
 }
-label{
-    color: black;
-}
-
-input{
-    background-color: #FAFAFA;
-    border-radius: 10px;
-    border: none;
-    padding: 5px;
-    outline: none;
-}
-button{
-    width: 40%;
-    background-color: #F0F0F0;
-    border-radius: 15px;
-    padding: 5px;
-    border: none;
-    align-self: center;
+label {
+  color: black;
 }
 
-button:hover{
-    cursor: pointer;
-    background-color: #FAFAFA;
+input {
+  background-color: #fafafa;
+  border-radius: 10px;
+  border: none;
+  padding: 5px;
+  outline: none;
+}
+button {
+  width: 40%;
+  background-color: #f0f0f0;
+  border-radius: 15px;
+  padding: 5px;
+  border: none;
+  align-self: center;
 }
 
-
-
-
+button:hover {
+  cursor: pointer;
+  background-color: #fafafa;
+}
