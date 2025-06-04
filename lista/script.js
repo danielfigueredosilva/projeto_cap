@@ -23,10 +23,13 @@ function atualizarTabela() {
             var linha = tabela.insertRow(); // Cria uma nova linha para cada usuário
             var celulaNome = linha.insertCell(); // Célula para o nome
             var celulaEmail = linha.insertCell(); // Célula para o e-mail
+            var celulaCep = linha.insertCell(); // Célula para o Cep
             var celulaAcoes = linha.insertCell(); // Célula para o botão de ação
+
 
             celulaNome.textContent = usuario.nome; // Preenche o nome do usuário
             celulaEmail.textContent = usuario.email; // Preenche o e-mail do usuário
+            celulaCep.textContent = usuario.cep;  // Preenche o Cep do usuário
 
             var botao = document.createElement('button'); // Cria o botão de excluir
             botao.textContent = 'Excluir'; // Texto do botão
@@ -62,3 +65,4 @@ botaoExcluirTodos.onclick = function() {
 
 // Inicializa a tabela ao carregar a página
 atualizarTabela();
+
