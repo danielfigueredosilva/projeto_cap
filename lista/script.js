@@ -34,7 +34,7 @@ function atualizarTabela() {
             var botao = document.createElement('button');
             botao.textContent = 'Excluir';
             botao.onclick = function() {
-                excluirUsuario(usuario.email); // Chama a função para excluir o usuário específico
+                excluirUsuario(usuario.email); 
             };
             celulaExcluir.appendChild(botao); 
         });
@@ -62,7 +62,6 @@ function excluirUsuario(email) {
 }
 
 botaoExcluirTodos.onclick = function() {
-    if (usuarios.length === 0) return; // Se não tiver usuários, não faz nada
     if (confirm('Tem certeza que deseja excluir todos os usuários?')) { 
         usuarios = [];
         
