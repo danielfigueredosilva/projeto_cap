@@ -17,6 +17,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  
 }
 #tudo{
   background-color: var(--cor-principal);
@@ -26,6 +27,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+ 
 }
 #Cartaz{
   max-width: 500px;
@@ -127,6 +129,7 @@ a:hover {
     height: auto;
     max-width: 90%;
     padding: 20px;
+    
   }
 
   #Cartaz {
@@ -164,4 +167,9 @@ a:hover {
     font-size: 14px;
     height: auto;
   }
+
+  #tudo {
+    border-radius: 10px;
+  }
+
 }
