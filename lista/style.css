@@ -9,7 +9,16 @@
     --cor-principal: rgb(61, 156, 144,0.97);
     --cor-hover-butao: #FFE574;
 }
-
+.master{
+  border-radius: 10px;
+  border: 5px solid rgb(61, 156, 144,0.97);
+  padding-bottom: 10px;
+  
+   
+}
+.atrasHeader{
+  background-color: rgb(61, 156, 144,0.97);
+}
 
 body {
     background-color: #f4f4f4;
